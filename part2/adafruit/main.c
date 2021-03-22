@@ -11,7 +11,7 @@ static const adc_channel_t channel = ADC_CHANNEL_7; //ADC1 channel 7 GPIO35
 void app_main() {
     wifi_init("BboxbeaWilly_EXT", "martinhouse");
 
-    aio_init("sibmartin", "aio_RbIJ04vkGkWvPe6X8WlbGXKg5FxR");
+    aio_init("sibmartin", "key");
 
     mcp9700_init(1,channel);
     uint32_t mcp_value;
