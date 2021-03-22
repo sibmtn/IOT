@@ -9,7 +9,7 @@
 static const adc_channel_t channel = ADC_CHANNEL_7; //ADC1 channel 7 GPIO35
 
 void app_main() {
-    wifi_init("BboxbeaWilly_EXT", "martinhouse");
+    wifi_init("ssid", "password");
     
     mqtt_init("mqtts://iot.devinci.online/", "sm170975", "B!5C#Cxw");
     
