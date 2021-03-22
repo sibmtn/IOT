@@ -22,6 +22,6 @@ void app_main() {
         char Value[10];
         sprintf(Value,"%d",mcp_temp);
 
-        mqtt_publish("sm170975/vma311/temp", Value);  
+        mqtt_publish("sm170975/mcp9700/temp", Value);  
     }	 
 }
