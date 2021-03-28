@@ -9,7 +9,7 @@
 static const adc_channel_t channel = ADC_CHANNEL_7; //ADC1 channel 7 GPIO35
 
 void app_main() {
-    wifi_init("BboxbeaWilly_EXT", "martinhouse");
+    wifi_init("wifiname", "password");
 
     aio_init("sibmartin", "key");
 
@@ -20,7 +20,7 @@ void app_main() {
         mcp_value = mcp9700_get_value(); 
         uint32_t mcp_temp = (mcp_value - 500)/10; //this function converts the voltage value in degree, it is found in the datasheet of the mcp
         char ValueIO[10];
-        sprintf(ValueIO,"%d",mcp_temp);
+        sprintf(ValueIO,"%d",mcp_temp); // I have to convert the value in a char*
 
         aio_create_data(ValueIO, "envmon.mcp9700-temp");
     }	
